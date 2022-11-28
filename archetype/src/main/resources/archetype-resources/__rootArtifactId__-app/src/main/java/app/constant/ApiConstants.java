@@ -1,4 +1,7 @@
-package com.saltyfish.archetype.app.constant;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package ${package}.app.constant;
 
 
 
@@ -14,6 +17,6 @@ public class ApiConstants {
      */
     public static final String NAME = "archetype-server";
 
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "${version}";
 
 }
