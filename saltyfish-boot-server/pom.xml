@@ -4,32 +4,74 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
     <groupId>com.saltyfish</groupId>
-    <artifactId>saltyfish-boot-framework</artifactId>
+    <artifactId>saltyfish-boot-archetype</artifactId>
     <version>1.0.0</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.saltyfish</groupId>
-  <artifactId>saltyfish-boot-archetype</artifactId>
+  <artifactId>saltyfish-boot-server</artifactId>
   <version>1.0.0</version>
-  <packaging>pom</packaging>
+  <name>saltyfish-boot-server</name>
 
-  <modules>
-    <module>saltyfish-boot-infrastructure</module>
-    <module>saltyfish-boot-client</module>
-    <module>saltyfish-boot-app</module>
-    <module>saltyfish-boot-adapter</module>
-      <module>saltyfish-boot-server</module>
-  </modules>
+  <dependencies>
+    <dependency>
+      <groupId>com.saltyfish</groupId>
+      <artifactId>saltyfish-boot-adapter</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.saltyfish</groupId>
+      <artifactId>saltyfish-boot-client</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.saltyfish</groupId>
+      <artifactId>saltyfish-boot-framework-error-code</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+    <!-- spring boot 配置所需依赖 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.saltyfish</groupId>
+      <artifactId>saltyfish-boot-framework-banner</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+    <!-- 服务保障相关 -->
+    <dependency>
+      <groupId>com.saltyfish</groupId>
+      <artifactId>saltyfish-boot-framework-protection</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+  </dependencies>
 
   <build>
     <finalName>${project.artifactId}</finalName>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.archetype</groupId>
-        <artifactId>archetype-packaging</artifactId>
-        <version>3.1.1</version>
-      </extension>
-    </extensions>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>2.6.7</version>
+        <configuration>
+          <!-- main方法的地址-->
+          <mainClass>com.saltyfish.ServerStartApplication</mainClass>
+          <fork>true</fork>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -63,45 +105,47 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
           <configuration>
             <encoding>UTF-8</encoding>
           </configuration>
         </plugin>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
         <plugin>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
         </plugin>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
         </plugin>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-install-plugin</artifactId>
           <version>2.5.2</version>
         </plugin>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>2.8.2</version>
         </plugin>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <version>3.7.1</version>
         </plugin>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
   </build>
-
-
 </project>

@@ -18,27 +18,10 @@
             <artifactId>${rootArtifactId}-app</artifactId>
             <version>${version}</version>
         </dependency>
-        <dependency>
-            <groupId>${groupId}</groupId>
-            <artifactId>${rootArtifactId}-client</artifactId>
-            <version>${version}</version>
-        </dependency>
 
         <dependency>
             <groupId>com.saltyfish</groupId>
             <artifactId>saltyfish-boot-framework-error-code</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
-        <!-- spring boot 配置所需依赖 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>com.saltyfish</groupId>
-            <artifactId>saltyfish-boot-framework-banner</artifactId>
             <version>1.0.0</version>
         </dependency>
 
@@ -52,25 +35,6 @@
 
     <build>
         <finalName>${project.artifactId}</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.6.7</version>
-                <configuration>
-                    <!-- main方法的地址-->
-                    <mainClass>com.saltyfish.ServerStartApplication</mainClass>
-                    <fork>true</fork>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
         <pluginManagement>
             <plugins>
                 <plugin>
