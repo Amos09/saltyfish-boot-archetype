@@ -19,6 +19,7 @@
     <module>saltyfish-boot-app</module>
     <module>saltyfish-boot-adapter</module>
       <module>saltyfish-boot-server</module>
+      <module>saltyfish-boot-domain</module>
   </modules>
 
   <build>

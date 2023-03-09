@@ -13,13 +13,6 @@
     <name>${artifactId}</name>
 
     <dependencies>
-
-        <!-- 单元测试 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>${groupId}</groupId>
             <artifactId>${rootArtifactId}-infrastructure</artifactId>
@@ -55,6 +48,12 @@
             <groupId>com.saltyfish</groupId>
             <artifactId>saltyfish-boot-framework-operatelog</artifactId>
             <version>1.0.0</version>
+        </dependency>
+        <!-- 单元测试 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
