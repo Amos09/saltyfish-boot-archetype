@@ -1,16 +1,13 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
-package ${package}.infrastructure.enums;
+package com.saltyfish.archetype.domain.enums;
 
-import ${groupId}.framework.common.exception.IResultCode;
+import com.saltyfish.framework.common.exception.IResultCode;
 import lombok.AllArgsConstructor;
 
 /**
  * @author: 番薯(Amos)
  * @dateTime: 10:15/09:03:2023
  * @version: v1.0
- * @description:
+ * @description: 异常信息枚举
  */
 @AllArgsConstructor
 public enum ErrorCodeEnum implements IResultCode {

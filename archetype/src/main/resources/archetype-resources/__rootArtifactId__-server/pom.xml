@@ -13,15 +13,16 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.saltyfish</groupId>
+      <groupId>${groupId}</groupId>
       <artifactId>${rootArtifactId}-adapter</artifactId>
-      <version>1.0.0</version>
+      <version>${version}</version>
     </dependency>
     <dependency>
-      <groupId>com.saltyfish</groupId>
+      <groupId>${groupId}</groupId>
       <artifactId>${rootArtifactId}-client</artifactId>
-      <version>1.0.0</version>
+      <version>${version}</version>
     </dependency>
+
     <dependency>
       <groupId>com.saltyfish</groupId>
       <artifactId>saltyfish-boot-framework-error-code</artifactId>
