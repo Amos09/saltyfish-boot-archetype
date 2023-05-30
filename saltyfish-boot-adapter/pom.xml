@@ -21,12 +21,6 @@
             <version>1.0.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.saltyfish</groupId>
-            <artifactId>saltyfish-boot-framework-error-code</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
         <!-- 服务保障相关 -->
         <dependency>
             <groupId>com.saltyfish</groupId>
