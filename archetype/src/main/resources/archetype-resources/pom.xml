@@ -11,7 +11,7 @@
     <version>${version}</version>
     <packaging>pom</packaging>
 
-	<modules>
+    <modules>
         <module>${rootArtifactId}-infrastructure</module>
         <module>${rootArtifactId}-client</module>
         <module>${rootArtifactId}-app</module>
