@@ -18,6 +18,12 @@
             <artifactId>saltyfish-boot-framework-common</artifactId>
             <version>1.0.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>${groupId}</groupId>
+            <artifactId>${rootArtifactId}-domain</artifactId>
+            <version>${version}</version>
+        </dependency>
     </dependencies>
 
     <build>

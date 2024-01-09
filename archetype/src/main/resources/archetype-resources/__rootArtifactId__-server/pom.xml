@@ -17,6 +17,7 @@
       <artifactId>${rootArtifactId}-adapter</artifactId>
       <version>${version}</version>
     </dependency>
+
     <dependency>
       <groupId>${groupId}</groupId>
       <artifactId>${rootArtifactId}-client</artifactId>
@@ -29,6 +30,7 @@
       <artifactId>spring-boot-configuration-processor</artifactId>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>com.saltyfish</groupId>
       <artifactId>saltyfish-boot-framework-banner</artifactId>
@@ -49,7 +51,7 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>2.6.7</version>
+        <version>2.7.17</version>
         <configuration>
           <!-- main方法的地址-->
           <mainClass>com.saltyfish.ServerStartApplication</mainClass>

@@ -15,14 +15,22 @@
     <dependencies>
         <dependency>
             <groupId>${groupId}</groupId>
+            <artifactId>${rootArtifactId}-integration</artifactId>
+            <version>${version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>${groupId}</groupId>
             <artifactId>${rootArtifactId}-infrastructure</artifactId>
             <version>${version}</version>
         </dependency>
+
         <dependency>
             <groupId>${groupId}</groupId>
             <artifactId>${rootArtifactId}-client</artifactId>
             <version>${version}</version>
         </dependency>
+
         <!-- Job 定时任务相关 -->
         <dependency>
             <groupId>com.saltyfish</groupId>
@@ -49,6 +57,7 @@
             <artifactId>saltyfish-boot-framework-operatelog</artifactId>
             <version>1.0.0</version>
         </dependency>
+
         <!-- 单元测试 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

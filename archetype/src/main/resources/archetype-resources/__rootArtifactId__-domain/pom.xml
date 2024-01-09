@@ -18,11 +18,13 @@
             <artifactId>saltyfish-boot-framework-common</artifactId>
             <version>1.0.0</version>
         </dependency>
+
         <dependency>
             <groupId>com.saltyfish</groupId>
             <artifactId>saltyfish-boot-framework-domain</artifactId>
             <version>1.0.0</version>
         </dependency>
+
         <!-- 参数校验 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -30,11 +32,6 @@
             <optional>true</optional>
         </dependency>
 
-        <dependency>
-            <groupId>${groupId}</groupId>
-            <artifactId>${rootArtifactId}-integration</artifactId>
-            <version>${version}</version>
-        </dependency>
     </dependencies>
 
     <build>
