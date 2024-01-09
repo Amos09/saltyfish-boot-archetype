@@ -19,6 +19,7 @@
             <artifactId>saltyfish-boot-framework-common</artifactId>
             <version>1.0.0</version>
         </dependency>
+
         <!-- 参数校验 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
