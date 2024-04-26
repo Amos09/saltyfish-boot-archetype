@@ -12,30 +12,30 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public enum ErrorCodeEnum implements IResultCode {
 
-    SUCCESS(200, "操作成功"),
-    SYSTEM_ERROR(500, "系统异常"),
-    DATA_NOT_EXISTS(1004001000, "数据不存在"),
-    
-    ;
-    
-    private Integer code;
-    private String message;
-    
-    @Override
-    public Integer getCode() {
-        return code;
-    }
-    
-    public void setCode(final Integer code) {
-        this.code = code;
-    }
-    
-    @Override
-    public String getMessage() {
-        return this.message;
-    }
-    
-    public void setMessage(final String message) {
-        this.message = message;
-    }
+	SUCCESS(200, "操作成功"), SYSTEM_ERROR(500, "系统异常"), DATA_NOT_EXISTS(1004001000, "数据不存在"),
+
+	;
+
+	private Integer code;
+
+	private String message;
+
+	@Override
+	public Integer getCode() {
+		return code;
+	}
+
+	public void setCode(final Integer code) {
+		this.code = code;
+	}
+
+	@Override
+	public String getMessage() {
+		return this.message;
+	}
+
+	public void setMessage(final String message) {
+		this.message = message;
+	}
+
 }
