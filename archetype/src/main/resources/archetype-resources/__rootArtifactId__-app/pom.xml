@@ -13,23 +13,23 @@
     <name>${artifactId}</name>
 
     <dependencies>
-        <dependency>
-            <groupId>${groupId}</groupId>
-            <artifactId>${rootArtifactId}-integration</artifactId>
-            <version>${version}</version>
-        </dependency>
+		<dependency>
+			<groupId>${groupId}</groupId>
+			<artifactId>${rootArtifactId}-integration</artifactId>
+			<version>${version}</version>
+		</dependency>
 
-        <dependency>
-            <groupId>${groupId}</groupId>
-            <artifactId>${rootArtifactId}-infrastructure</artifactId>
-            <version>${version}</version>
-        </dependency>
+		<dependency>
+			<groupId>${groupId}</groupId>
+			<artifactId>${rootArtifactId}-infrastructure</artifactId>
+			<version>${version}</version>
+		</dependency>
 
-        <dependency>
-            <groupId>${groupId}</groupId>
-            <artifactId>${rootArtifactId}-client</artifactId>
-            <version>${version}</version>
-        </dependency>
+		<dependency>
+			<groupId>${groupId}</groupId>
+			<artifactId>${rootArtifactId}-client</artifactId>
+			<version>${version}</version>
+		</dependency>
 
         <!-- Job 定时任务相关 -->
         <dependency>
