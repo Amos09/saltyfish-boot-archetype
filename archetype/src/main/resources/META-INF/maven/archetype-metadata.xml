@@ -55,7 +55,23 @@
     </fileSet>
   </fileSets>
   <modules>
-    <module id="${rootArtifactId}-infrastructure" dir="__rootArtifactId__-infrastructure" name="${rootArtifactId}-infrastructure">
+    <module id="${rootArtifactId}-client" dir="__rootArtifactId__-client" name="${rootArtifactId}-client">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.flattened-pom.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>README.md</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-domain" dir="__rootArtifactId__-domain" name="${rootArtifactId}-domain">
       <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
           <directory>src/main/java</directory>
@@ -65,12 +81,6 @@
         </fileSet>
         <fileSet packaged="true" encoding="UTF-8">
           <directory>src/main/java</directory>
-          <includes>
-            <include>**/*.md</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>src/main/resources</directory>
           <includes>
             <include>**/*.md</include>
           </includes>
@@ -89,10 +99,38 @@
         </fileSet>
       </fileSets>
     </module>
-    <module id="${rootArtifactId}-client" dir="__rootArtifactId__-client" name="${rootArtifactId}-client">
+    <module id="${rootArtifactId}-integration" dir="__rootArtifactId__-integration" name="${rootArtifactId}-integration">
       <fileSets>
         <fileSet packaged="true" encoding="UTF-8">
           <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.md</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.flattened-pom.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>README.md</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-infrastructure" dir="__rootArtifactId__-infrastructure" name="${rootArtifactId}-infrastructure">
+      <fileSets>
+        <fileSet packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.md</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/resources</directory>
           <includes>
             <include>**/*.md</include>
           </includes>
@@ -163,7 +201,7 @@
     </module>
     <module id="${rootArtifactId}-server" dir="__rootArtifactId__-server" name="${rootArtifactId}-server">
       <fileSets>
-        <fileSet filtered="true" encoding="UTF-8">
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
           <directory>src/main/java</directory>
           <includes>
             <include>**/*.java</include>
@@ -180,56 +218,6 @@
           <directory></directory>
           <includes>
             <include>.flattened-pom.xml</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-    <module id="${rootArtifactId}-domain" dir="__rootArtifactId__-domain" name="${rootArtifactId}-domain">
-      <fileSets>
-        <fileSet filtered="true" packaged="true" encoding="UTF-8">
-          <directory>src/main/java</directory>
-          <includes>
-            <include>**/*.java</include>
-          </includes>
-        </fileSet>
-        <fileSet packaged="true" encoding="UTF-8">
-          <directory>src/main/java</directory>
-          <includes>
-            <include>**/*.md</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>.flattened-pom.xml</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>README.md</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-    <module id="${rootArtifactId}-integration" dir="__rootArtifactId__-integration" name="${rootArtifactId}-integration">
-      <fileSets>
-        <fileSet packaged="true" encoding="UTF-8">
-          <directory>src/main/java</directory>
-          <includes>
-            <include>**/*.md</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>.flattened-pom.xml</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>README.md</include>
           </includes>
         </fileSet>
       </fileSets>
