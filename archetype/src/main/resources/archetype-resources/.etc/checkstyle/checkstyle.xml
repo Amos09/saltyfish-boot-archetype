@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 <?xml version="1.0"?>
 <!DOCTYPE module PUBLIC
 		"-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
@@ -20,7 +23,7 @@
 	<module name="SuppressWarningsFilter"/>
 
 	<module name="BeforeExecutionExclusionFileFilter">
-		<property name="fileNamePattern" value="module\-info\.java$"/>
+		<property name="fileNamePattern" value="module${symbol_escape}-info${symbol_escape}.java${symbol_dollar}"/>
 	</module>
 
 	<module name="SuppressionFilter">
@@ -45,7 +48,7 @@
 		<module name="IllegalTokenText">
 			<property name="tokens" value="STRING_LITERAL, CHAR_LITERAL"/>
 			<property name="format"
-					value="\\u00(09|0(a|A)|0(c|C)|0(d|D)|22|27|5(C|c))|\\(0(10|11|12|14|15|42|47)|134)"/>
+					value="${symbol_escape}${symbol_escape}u00(09|0(a|A)|0(c|C)|0(d|D)|22|27|5(C|c))|${symbol_escape}${symbol_escape}(0(10|11|12|14|15|42|47)|134)"/>
 			<property name="message"
 					value="Consider using special escape sequence instead of octal value or Unicode escaped value."/>
 		</module>
@@ -163,7 +166,7 @@
 		<module name="PackageName">
 			<message key="name.invalidPattern"
 					value="Package name ''{0}'' must match pattern ''{1}''."/>
-			<property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$"/>
+			<property name="format" value="^[a-z]+(${symbol_escape}.[a-z][a-z0-9]*)*${symbol_dollar}"/>
 		</module>
 		<module name="TypeName">
 			<message key="name.invalidPattern"
@@ -174,61 +177,61 @@
 		<module name="MemberName">
 			<message key="name.invalidPattern"
 					value="Member name ''{0}'' must match pattern ''{1}''."/>
-			<property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
+			<property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*${symbol_dollar}"/>
 		</module>
 		<module name="ParameterName">
 			<message key="name.invalidPattern"
 					value="Parameter name ''{0}'' must match pattern ''{1}''."/>
-			<property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?$"/>
+			<property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?${symbol_dollar}"/>
 		</module>
 		<module name="LambdaParameterName">
 			<message key="name.invalidPattern"
 					value="Lambda parameter name ''{0}'' must match pattern ''{1}''."/>
-			<property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?$"/>
+			<property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?${symbol_dollar}"/>
 		</module>
 		<module name="CatchParameterName">
 			<message key="name.invalidPattern"
 					value="Catch parameter name ''{0}'' must match pattern ''{1}''."/>
-			<property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?$"/>
+			<property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?${symbol_dollar}"/>
 		</module>
 		<module name="LocalVariableName">
 			<message key="name.invalidPattern"
 					value="Local variable name ''{0}'' must match pattern ''{1}''."/>
-			<property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?$"/>
+			<property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?${symbol_dollar}"/>
 		</module>
 		<module name="PatternVariableName">
 			<message key="name.invalidPattern"
 					value="Pattern variable name ''{0}'' must match pattern ''{1}''."/>
-			<property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?$"/>
+			<property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?${symbol_dollar}"/>
 		</module>
 		<module name="ClassTypeParameterName">
 			<message key="name.invalidPattern"
 					value="Class type name ''{0}'' must match pattern ''{1}''."/>
-			<property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+			<property name="format" value="(^[A-Z][0-9]?)${symbol_dollar}|([A-Z][a-zA-Z0-9]*[T]${symbol_dollar})"/>
 		</module>
 		<module name="RecordComponentName">
 			<message key="name.invalidPattern" value="Record component name ''{0}'' must match pattern ''{1}''."/>
-			<property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?$"/>
+			<property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?${symbol_dollar}"/>
 		</module>
 		<module name="RecordTypeParameterName">
 			<message key="name.invalidPattern"
 					value="Record type name ''{0}'' must match pattern ''{1}''."/>
-			<property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+			<property name="format" value="(^[A-Z][0-9]?)${symbol_dollar}|([A-Z][a-zA-Z0-9]*[T]${symbol_dollar})"/>
 		</module>
 		<module name="RecordTypeParameterName">
 			<message key="name.invalidPattern"
 					value="Record type name ''{0}'' must match pattern ''{1}''."/>
-			<property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+			<property name="format" value="(^[A-Z][0-9]?)${symbol_dollar}|([A-Z][a-zA-Z0-9]*[T]${symbol_dollar})"/>
 		</module>
 		<module name="MethodTypeParameterName">
 			<message key="name.invalidPattern"
 					value="Method type name ''{0}'' must match pattern ''{1}''."/>
-			<property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+			<property name="format" value="(^[A-Z][0-9]?)${symbol_dollar}|([A-Z][a-zA-Z0-9]*[T]${symbol_dollar})"/>
 		</module>
 		<module name="InterfaceTypeParameterName">
 			<message key="name.invalidPattern"
 					value="Interface type name ''{0}'' must match pattern ''{1}''."/>
-			<property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+			<property name="format" value="(^[A-Z][0-9]?)${symbol_dollar}|([A-Z][a-zA-Z0-9]*[T]${symbol_dollar})"/>
 		</module>
 		<module name="NoFinalizer"/>
 		<module name="GenericWhitespace">
@@ -265,7 +268,7 @@
 		<module name="CustomImportOrder">
 			<property name="sortImportsInGroupAlphabetically" value="true"/>
 			<property name="separateLineBetweenGroups" value="true"/>
-			<property name="customImportOrderRules" value="STATIC###THIRD_PARTY_PACKAGE"/>
+			<property name="customImportOrderRules" value="STATIC${symbol_pound}${symbol_pound}${symbol_pound}THIRD_PARTY_PACKAGE"/>
 			<property name="tokens" value="IMPORT, STATIC_IMPORT, PACKAGE_DEF"/>
 		</module>
 		<module name="MethodParamPad">
@@ -349,7 +352,7 @@
 		<module name="MethodName">
 			<message key="name.invalidPattern"
 					value="Method name ''{0}'' must match pattern ''{1}''."/>
-			<property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*$"/>
+			<property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*${symbol_dollar}"/>
 		</module>
 		<module name="SingleLineJavadoc">
 			<property name="ignoreInlineTags" value="false"/>
@@ -362,18 +365,18 @@
 		</module>
 		<module name="SuppressionXpathFilter">
 			<property default="checkstyle-xpath-suppressions.xml" name="file"
-					value="${org.checkstyle.google.suppressionxpathfilter.config}"/>
+					value="${symbol_dollar}{org.checkstyle.google.suppressionxpathfilter.config}"/>
 			<property name="optional" value="true"/>
 		</module>
 		<module name="SuppressWarningsHolder"/>
 		<module name="SuppressionCommentFilter">
-			<property name="offCommentFormat" value="CHECKSTYLE.OFF\: ([\w\|]+)"/>
-			<property name="onCommentFormat" value="CHECKSTYLE.ON\: ([\w\|]+)"/>
-			<property name="checkFormat" value="$1"/>
+			<property name="offCommentFormat" value="CHECKSTYLE.OFF${symbol_escape}: ([${symbol_escape}w${symbol_escape}|]+)"/>
+			<property name="onCommentFormat" value="CHECKSTYLE.ON${symbol_escape}: ([${symbol_escape}w${symbol_escape}|]+)"/>
+			<property name="checkFormat" value="${symbol_dollar}1"/>
 		</module>
 		<module name="SuppressWithNearbyCommentFilter">
-			<property name="commentFormat" value="CHECKSTYLE.SUPPRESS\: ([\w\|]+)"/>
-			<property name="checkFormat" value="$1"/>
+			<property name="commentFormat" value="CHECKSTYLE.SUPPRESS${symbol_escape}: ([${symbol_escape}w${symbol_escape}|]+)"/>
+			<property name="checkFormat" value="${symbol_dollar}1"/>
 			<property name="influenceFormat" value="1"/>
 		</module>
 	</module>
